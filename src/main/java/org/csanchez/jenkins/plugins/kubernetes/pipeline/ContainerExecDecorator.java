@@ -122,7 +122,7 @@ public class ContainerExecDecorator extends LauncherDecorator implements Seriali
                     stream = new NullOutputStream();
                     printStream = new PrintStream(stream, false, StandardCharsets.UTF_8.toString());
                 }
-                
+
                 // we need to keep the last bytes in the stream to parse the exit code as it is printed there
                 // so we use a buffer
                 ExitCodeOutputStream exitCodeOutputStream = new ExitCodeOutputStream();
@@ -363,7 +363,7 @@ public class ContainerExecDecorator extends LauncherDecorator implements Seriali
         private EvictingQueue<Integer> queue = EvictingQueue.create(20);
 
         public ExitCodeOutputStream() {
-            
+
         }
 
         @Override
